@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="jumpengine 下载中心 - 获取最新版本的工具">
-  <title>下载 - jumpengine</title>
+  <meta name="description" content="JumpEngine 下载中心 - 获取最新版本的工具软件">
+  <title>下载 - JumpEngine</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/ScrollObserver.js" defer></script>
+  <script src="assets/js/Counter.js" defer></script>
+  <script src="assets/js/NavController.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
 
   <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 w-full bg-white shadow-sm transition-transform duration-300 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-          jumpengine
+          JumpEngine
         </a>
 
-        <!-- Navigation Links -->
+        <!-- Navigation Links (Desktop) -->
         <nav class="hidden md:flex space-x-8">
           <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             主页
@@ -41,11 +47,29 @@
             关于
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="download.html" class="nav-link text-blue-600 font-semibold relative group">
             下载
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
           </a>
         </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
+        <a href="download.html" class="block py-2 text-blue-600 font-semibold">下载</a>
       </div>
     </div>
   </header>
@@ -56,12 +80,32 @@
   <!-- Main Content -->
   <main>
     <!-- Download Hero -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 fade-in">下载中心</h1>
-        <p class="text-lg text-gray-600 fade-in" style="transition-delay: 100ms;">
-          获取 jumpengine 工具的最新版本
-        </p>
+    <section class="py-16 bg-gradient-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center fade-in">
+          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">下载中心</p>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">获取最新版本</h1>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            下载 JumpEngine 工具的最新版本。所有产品均支持 Windows 平台，部分产品提供 macOS 和 Linux 版本。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Tabs (Optional Enhancement) -->
+    <section class="py-8 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center gap-4 fade-in">
+          <button class="platform-tab active px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition-colors" data-platform="windows">
+            Windows
+          </button>
+          <button class="platform-tab px-6 py-2 rounded-full bg-gray-100 text-gray-600 font-medium hover:bg-gray-200 transition-colors" data-platform="macos">
+            macOS
+          </button>
+          <button class="platform-tab px-6 py-2 rounded-full bg-gray-100 text-gray-600 font-medium hover:bg-gray-200 transition-colors" data-platform="linux">
+            Linux
+          </button>
+        </div>
       </div>
     </section>
 
@@ -70,82 +114,220 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
 
         <!-- Download Item 1 -->
-        <div class="bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:shadow-md fade-in">
+        <div class="card p-6 fade-in hover:bg-gray-50 transition-colors">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-1">产品名称</h3>
-              <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新</p>
+            <div class="flex items-start gap-4">
+              <div class="icon-placeholder icon-gradient-1 flex-shrink-0" style="width: 48px; height: 48px; font-size: 1rem;">P1</div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">产品名称1</h3>
+                <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新 | 更新日期：2026-05</p>
+                <p class="text-xs text-gray-400 mt-1">简短描述占位，说明产品主要功能</p>
+              </div>
             </div>
-            <button onclick="alert('即将上线')" class="py-2 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap">
+            <a href="#" class="btn btn-primary whitespace-nowrap">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
               下载
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Download Item 2 -->
-        <div class="bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:shadow-md fade-in">
+        <div class="card p-6 fade-in hover:bg-gray-50 transition-colors">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-1">产品名称</h3>
-              <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新</p>
+            <div class="flex items-start gap-4">
+              <div class="icon-placeholder icon-gradient-2 flex-shrink-0" style="width: 48px; height: 48px; font-size: 1rem;">P2</div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">产品名称2</h3>
+                <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新 | 更新日期：2026-05</p>
+                <p class="text-xs text-gray-400 mt-1">简短描述占位，说明产品主要功能</p>
+              </div>
             </div>
-            <button onclick="alert('即将上线')" class="py-2 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap">
+            <a href="#" class="btn btn-primary whitespace-nowrap">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
               下载
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Download Item 3 -->
-        <div class="bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:shadow-md fade-in">
+        <div class="card p-6 fade-in hover:bg-gray-50 transition-colors">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-1">产品名称</h3>
-              <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新</p>
+            <div class="flex items-start gap-4">
+              <div class="icon-placeholder icon-gradient-3 flex-shrink-0" style="width: 48px; height: 48px; font-size: 1rem;">P3</div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">产品名称3</h3>
+                <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新 | 更新日期：2026-05</p>
+                <p class="text-xs text-gray-400 mt-1">简短描述占位，说明产品主要功能</p>
+              </div>
             </div>
-            <button onclick="alert('即将上线')" class="py-2 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap">
+            <a href="#" class="btn btn-primary whitespace-nowrap">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
               下载
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Download Item 4 -->
-        <div class="bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:shadow-md fade-in">
+        <div class="card p-6 fade-in hover:bg-gray-50 transition-colors">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-1">产品名称</h3>
-              <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新</p>
+            <div class="flex items-start gap-4">
+              <div class="icon-placeholder icon-gradient-4 flex-shrink-0" style="width: 48px; height: 48px; font-size: 1rem;">P4</div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">产品名称4</h3>
+                <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新 | 更新日期：2026-05</p>
+                <p class="text-xs text-gray-400 mt-1">简短描述占位，说明产品主要功能</p>
+              </div>
             </div>
-            <button onclick="alert('即将上线')" class="py-2 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap">
+            <a href="#" class="btn btn-primary whitespace-nowrap">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
               下载
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Download Item 5 -->
-        <div class="bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:shadow-md fade-in">
+        <div class="card p-6 fade-in hover:bg-gray-50 transition-colors">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-1">产品名称</h3>
-              <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新</p>
+            <div class="flex items-start gap-4">
+              <div class="icon-placeholder icon-gradient-5 flex-shrink-0" style="width: 48px; height: 48px; font-size: 1rem;">P5</div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">产品名称5</h3>
+                <p class="text-sm text-gray-500">版本 v1.0.0 | 文件大小：待更新 | 更新日期：2026-05</p>
+                <p class="text-xs text-gray-400 mt-1">简短描述占位，说明产品主要功能</p>
+              </div>
             </div>
-            <button onclick="alert('即将上线')" class="py-2 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap">
+            <a href="#" class="btn btn-primary whitespace-nowrap">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
               下载
-            </button>
+            </a>
           </div>
         </div>
 
       </div>
     </section>
+
+    <!-- Installation Guide -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="fade-in">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">安装指南</h2>
+          
+          <div class="space-y-6">
+            <div class="card p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold flex-shrink-0">1</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">下载安装包</h3>
+                  <p class="text-gray-600 text-sm">点击上方的下载按钮，将安装包保存到本地计算机。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold flex-shrink-0">2</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">运行安装程序</h3>
+                  <p class="text-gray-600 text-sm">双击下载的安装包文件，按照安装向导的提示完成安装。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold flex-shrink-0">3</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">启动使用</h3>
+                  <p class="text-gray-600 text-sm">安装完成后，从桌面快捷方式或开始菜单启动应用程序。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-50 py-8">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="text-sm text-gray-500">&copy; 2026 jumpengine 版权所有</p>
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <!-- Column 1: Products -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
+            <li><a href="download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
+            <li><a href="source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Support -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">支持</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">关于</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
+            <li><a href="about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">法律</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">隐私政策</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">服务条款</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">开源协议</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 JumpEngine (JE Studio). 保留所有权利。</p>
+        <p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="assets/js/main.js" defer></script>
+  <script>
+    // Platform tab switching (simple implementation)
+    document.querySelectorAll('.platform-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.platform-tab').forEach(t => {
+          t.classList.remove('active', 'bg-blue-600', 'text-white');
+          t.classList.add('bg-gray-100', 'text-gray-600');
+        });
+        tab.classList.add('active', 'bg-blue-600', 'text-white');
+        tab.classList.remove('bg-gray-100', 'text-gray-600');
+        
+        // Here you would filter downloads by platform
+        const platform = tab.dataset.platform;
+        console.log('Selected platform:', platform);
+      });
+    });
+  </script>
+
 </body>
 </html>

@@ -3,35 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="jumpengine 产品列表 - 探索我们的创新工具">
-  <title>产品 - jumpengine</title>
+  <meta name="description" content="JumpEngine 产品列表 - 探索我们的创新工具矩阵">
+  <title>产品 - JumpEngine</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/ScrollObserver.js" defer></script>
+  <script src="assets/js/Counter.js" defer></script>
+  <script src="assets/js/NavController.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
 
   <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 w-full bg-white shadow-sm transition-transform duration-300 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-          jumpengine
+          JumpEngine
         </a>
 
-        <!-- Navigation Links -->
+        <!-- Navigation Links (Desktop) -->
         <nav class="hidden md:flex space-x-8">
           <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             主页
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="products.html" class="nav-link text-blue-600 font-semibold relative group">
             产品
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
           </a>
           <a href="source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             源码
@@ -46,6 +52,24 @@
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="products.html" class="block py-2 text-blue-600 font-semibold">产品</a>
+        <a href="source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
+        <a href="download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
       </div>
     </div>
   </header>
@@ -56,117 +80,257 @@
   <!-- Main Content -->
   <main>
     <!-- Page Hero -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 fade-in">我们的产品</h1>
-        <p class="text-lg text-gray-600 fade-in" style="transition-delay: 100ms;">
-          探索 jumpengine 打造的创新工具，为开发者提供高效解决方案
-        </p>
+    <section class="py-16 bg-gradient-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center fade-in">
+          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">产品矩阵</p>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">我们的产品</h1>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            探索 JumpEngine 打造的创新工具矩阵，为不同场景提供专业解决方案。所有产品均遵循开源免费、离线可用的设计理念。
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Product Grid -->
+    <!-- Product Groups -->
     <section class="py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-          <!-- Product Card 1 -->
-          <div class="product-card bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in">
-            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-white text-sm">图标</span>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">产品名称</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              这里是产品简介占位文字。后续将替换为实际的产品描述内容，简要说明产品功能和特点。
-            </p>
-            <button onclick="alert('即将上线')" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
-              下载
-            </button>
+        <!-- Group 1: Creation Flow -->
+        <div class="fade-in">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">创作流</h2>
+            <p class="text-gray-600">录屏 → 剪辑 → 格式转换，一站式内容创作解决方案</p>
           </div>
 
-          <!-- Product Card 2 -->
-          <div class="product-card bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in">
-            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-white text-sm">图标</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product Card 1 -->
+            <div class="card p-6 stagger-item" style="--delay: 100ms;">
+              <div class="icon-placeholder icon-gradient-1 mb-4">P1</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品1名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品1的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">产品名称</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              这里是产品简介占位文字。后续将替换为实际的产品描述内容，简要说明产品功能和特点。
-            </p>
-            <button onclick="alert('即将上线')" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
-              下载
-            </button>
+
+            <!-- Product Card 2 -->
+            <div class="card p-6 stagger-item" style="--delay: 200ms;">
+              <div class="icon-placeholder icon-gradient-2 mb-4">P2</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品2名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品2的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="card p-6 stagger-item" style="--delay: 300ms;">
+              <div class="icon-placeholder icon-gradient-3 mb-4">P3</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品3名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品3的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 2: Efficiency Flow -->
+        <div class="fade-in">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">效率流</h2>
+            <p class="text-gray-600">投屏 → 扩展屏 → 屏幕共享，提升工作效率的工具集</p>
           </div>
 
-          <!-- Product Card 3 -->
-          <div class="product-card bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in">
-            <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-white text-sm">图标</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product Card 4 -->
+            <div class="card p-6 stagger-item" style="--delay: 100ms;">
+              <div class="icon-placeholder icon-gradient-4 mb-4">P4</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品4名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品4的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">产品名称</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              这里是产品简介占位文字。后续将替换为实际的产品描述内容，简要说明产品功能和特点。
-            </p>
-            <button onclick="alert('即将上线')" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
-              下载
-            </button>
+
+            <!-- Product Card 5 -->
+            <div class="card p-6 stagger-item" style="--delay: 200ms;">
+              <div class="icon-placeholder icon-gradient-5 mb-4">P5</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品5名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品5的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="card p-6 stagger-item" style="--delay: 300ms;">
+              <div class="icon-placeholder icon-gradient-6 mb-4">P6</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品6名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品6的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 3: Security Flow -->
+        <div class="fade-in">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">安全流</h2>
+            <p class="text-gray-600">加密、加水印，保护您的数字资产安全</p>
           </div>
 
-          <!-- Product Card 4 -->
-          <div class="product-card bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in">
-            <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-white text-sm">图标</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Product Card 7 -->
+            <div class="card p-6 stagger-item" style="--delay: 100ms;">
+              <div class="icon-placeholder icon-gradient-1 mb-4">P7</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品7名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品7的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">产品名称</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              这里是产品简介占位文字。后续将替换为实际的产品描述内容，简要说明产品功能和特点。
-            </p>
-            <button onclick="alert('即将上线')" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
-              下载
-            </button>
-          </div>
 
-          <!-- Product Card 5 -->
-          <div class="product-card bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in">
-            <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-white text-sm">图标</span>
+            <!-- Product Card 8 -->
+            <div class="card p-6 stagger-item" style="--delay: 200ms;">
+              <div class="icon-placeholder icon-gradient-2 mb-4">P8</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品8名称</h3>
+              <p class="text-gray-600 text-sm mb-6">
+                这里是产品8的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
+              </p>
+              <div class="flex gap-3">
+                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
+                  下载
+                </a>
+                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
+                  详情
+                </a>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">产品名称</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              这里是产品简介占位文字。后续将替换为实际的产品描述内容，简要说明产品功能和特点。
-            </p>
-            <button onclick="alert('即将上线')" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
-              下载
-            </button>
           </div>
+        </div>
 
-          <!-- Product Card 6 -->
-          <div class="product-card bg-white border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in">
-            <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-white text-sm">图标</span>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">产品名称</h3>
-            <p class="text-gray-600 text-sm mb-4">
-              这里是产品简介占位文字。后续将替换为实际的产品描述内容，简要说明产品功能和特点。
-            </p>
-            <button onclick="alert('即将上线')" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
-              下载
-            </button>
-          </div>
+      </div>
+    </section>
 
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center fade-in">
+          <p class="text-3xl font-bold text-blue-600 mb-2">
+            <span class="counter" data-target="8900" data-duration="1500">0</span>+
+          </p>
+          <p class="text-gray-600">已有用户下载使用我们的产品</p>
+          <p class="text-sm text-gray-400 mt-1">（占位数字，待接入真实数据）</p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-50 py-8">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="text-sm text-gray-500">&copy; 2026 jumpengine 版权所有</p>
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <!-- Column 1: Products -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
+            <li><a href="download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
+            <li><a href="source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Support -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">支持</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">关于</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
+            <li><a href="about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">法律</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">隐私政策</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">服务条款</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">开源协议</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 JumpEngine (JE Studio). 保留所有权利。</p>
+        <p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

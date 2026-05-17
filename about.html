@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="关于 jumpengine - 了解我们的使命和愿景">
-  <title>关于 - jumpengine</title>
+  <meta name="description" content="关于 JumpEngine - 了解我们的使命、愿景和联系方式">
+  <title>关于 - Jumpengine</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/ScrollObserver.js" defer></script>
+  <script src="assets/js/Counter.js" defer></script>
+  <script src="assets/js/NavController.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
 
   <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 w-full bg-white shadow-sm transition-transform duration-300 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
-        <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-          jumpengine
-        </a>
+          <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+            Jumpengine
+          </a>
 
-        <!-- Navigation Links -->
+        <!-- Navigation Links (Desktop) -->
         <nav class="hidden md:flex space-x-8">
           <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             主页
@@ -37,15 +43,33 @@
             源码
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="about.html" class="nav-link text-blue-600 font-semibold relative group">
             关于
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
           </a>
           <a href="download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             下载
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="about.html" class="block py-2 text-blue-600 font-semibold">关于</a>
+        <a href="download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
       </div>
     </div>
   </header>
@@ -56,50 +80,154 @@
   <!-- Main Content -->
   <main>
     <!-- About Hero -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 fade-in">关于 jumpengine</h1>
-        <p class="text-lg text-gray-600 fade-in" style="transition-delay: 100ms;">
-          以技术创新驱动，为开发者打造高效实用的工具平台
-        </p>
+    <section class="py-16 bg-gradient-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center fade-in">
+          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">关于我们</p>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">关于 Jumpengine</h1>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            以技术创新驱动，为开发者打造高效实用的工具平台
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Content Sections -->
     <section class="py-16">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         <!-- Project Introduction -->
         <div class="fade-in">
-          <h2 class="text-2xl font-semibold text-gray-900 mb-4">项目介绍</h2>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            这是项目简介。
-          </p>
+          <div class="card p-8">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">项目介绍</h2>
+                <p class="text-gray-600 leading-relaxed">
+                  这是项目简介的占位文案。后续将替换为实际的项目介绍，详细说明 Jumpengine 的创立背景、发展历程和核心价值主张。
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                  Jumpengine是一个专注于开发高效实用桌面工具的工作室，旗下拥有多个成熟产品，涵盖教育工具、AI应用、媒体处理等多个领域。
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Mission Statement -->
         <div class="fade-in">
-          <h2 class="text-2xl font-semibold text-gray-900 mb-4">我们的使命</h2>
-          <p class="text-gray-600 leading-relaxed">
-            这是我们的使命。
-          </p>
+          <div class="card p-8">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">品牌使命</h2>
+                <p class="text-gray-600 leading-relaxed">
+                  这是品牌使命的占位文案。后续将替换为实际的使命宣言，阐述 Jumpengine 存在的意义和追求的目标。
+                </p>
+                <ul class="mt-4 space-y-2 text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>让技术更简单：降低复杂功能的使用门槛</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>开源共享：所有产品免费开放源代码</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>离线优先：保护用户隐私，无需联网即可使用</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="fade-in">
+          <div class="card p-8">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">核心价值观</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">创新</h3>
+                    <p class="text-sm text-gray-600">持续探索新技术，为用户提供前沿解决方案</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">实用</h3>
+                    <p class="text-sm text-gray-600">聚焦真实需求，拒绝华而不实的功能堆砌</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">开放</h3>
+                    <p class="text-sm text-gray-600">拥抱开源社区，与全球开发者共同成长</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">可信</h3>
+                    <p class="text-sm text-gray-600">代码透明可查，绝不收集用户隐私数据</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Contact Section -->
-        <div class="fade-in">
-          <h2 class="text-2xl font-semibold text-gray-900 mb-4">联系方式</h2>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            如有任何问题、建议或合作意向，欢迎通过以下方式联系我们：
-          </p>
-          <div class="space-y-2">
-            <p class="text-gray-600">
-              <span class="font-medium">邮箱：</span>
-              <a href="mailto:JEweilaikejigan@jumpengine.org" class="text-blue-600 hover:underline">JEweilaikejigan@jumpengine.org</a>
-            </p>
-            <p class="text-gray-600">
-              <span class="font-medium">网站：</span>
-              <a href="index.html" class="text-blue-600 hover:underline">jumpengine.org</a>
-            </p>
+        <div id="contact" class="fade-in">
+          <div class="card p-8">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">联系方式</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  如有任何问题、建议或合作意向，欢迎通过以下方式联系我们：
+                </p>
+                <div class="space-y-4">
+                  <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                    <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <div>
+                      <p class="text-sm text-gray-500">邮箱</p>
+                      <a href="mailto:JEweilaikejigan@jumpengine.org" class="text-blue-600 hover:underline font-medium">JEweilaikejigan@jumpengine.org</a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                    <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                    </svg>
+                    <div>
+                      <p class="text-sm text-gray-500">网站</p>
+                      <a href="index.html" class="text-blue-600 hover:underline font-medium">jumpengine.org</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -108,13 +236,57 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-50 py-8">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="text-sm text-gray-500">&copy; 2026 jumpengine 版权所有</p>
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <!-- Column 1: Products -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
+            <li><a href="download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
+            <li><a href="source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Support -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">支持</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">关于</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
+            <li><a href="about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">法律</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">隐私政策</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">服务条款</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">开源协议</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 Jumpengine. 保留所有权利。</p>
+        <p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

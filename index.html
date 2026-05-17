@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="jumpengine - 未来科技感，创新工具平台">
-  <title>jumpengine · 未来科技感</title>
+  <meta name="description" content="Jumpengine - 专注于创新产品与平台化工具，打造现代企业级官网体验">
+  <meta property="og:title" content="Jumpengine · 未来科技感">
+  <meta property="og:description" content="专注于创新产品与平台化工具，打造现代企业级官网体验">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jumpengine.org">
+  <title>Jumpengine · 未来科技感</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/ScrollObserver.js" defer></script>
+  <script src="assets/js/Counter.js" defer></script>
+  <script src="assets/js/NavController.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
 
   <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 w-full bg-white shadow-sm transition-transform duration-300 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
-        <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-          jumpengine
-        </a>
+          <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+            Jumpengine
+          </a>
 
-        <!-- Navigation Links -->
+        <!-- Navigation Links (Desktop) -->
         <nav class="hidden md:flex space-x-8">
-          <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="index.html" class="nav-link text-blue-600 font-semibold relative group">
             主页
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300"></span>
           </a>
           <a href="products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             产品
@@ -46,6 +56,24 @@
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2 text-blue-600 font-semibold">主页</a>
+        <a href="products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
+        <a href="download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
       </div>
     </div>
   </header>
@@ -56,116 +84,360 @@
   <!-- Main Content -->
   <main>
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section class="min-h-screen flex items-center bg-gradient-hero relative overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left: Text Content -->
-          <div class="text-left">
-            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 fade-in">
-              jumpengine
+          <div class="text-left text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in leading-tight">
+              让每一个灵感，<br>都被轻松录制与分享
             </h1>
-            <p class="text-3xl md:text-4xl font-light text-gray-600 mb-8 fade-in" style="transition-delay: 150ms;">
-              专注于创新产品与平台化工具，打造现代企业级官网体验
+            <p class="text-lg md:text-xl text-blue-100/90 mb-8 fade-in" style="transition-delay: 150ms;">
+              这里是品牌核心价值主张的占位文案。后续将替换为实际的产品定位描述，清晰传达产品的独特优势和使用场景。
             </p>
 
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-              <a href="products.html" class="inline-flex items-center justify-center py-3 px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 fade-in" style="transition-delay: 300ms;">
-                浏览产品
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 fade-in" style="transition-delay: 300ms;">
+              <a href="download.html" class="btn btn-primary bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl">
+                下载主要产品
               </a>
-              <a href="download.html" class="inline-flex items-center justify-center py-3 px-8 border border-gray-200 text-gray-900 rounded-full hover:bg-gray-100 transition-all duration-200 fade-in" style="transition-delay: 450ms;">
-                立即下载
+              <a href="products.html" class="btn btn-secondary border-white text-white hover:bg-white/10">
+                了解产品矩阵
               </a>
             </div>
           </div>
 
-          <!-- Right: Hero Visual -->
-          <div class="fade-in" style="transition-delay: 600ms;">
-            <div class="w-full min-h-[520px] rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-blue-600 to-purple-500 relative">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.18),_transparent_30%)]"></div>
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.12),_transparent_28%)]"></div>
-              <div class="relative h-full p-8 flex flex-col justify-between text-white">
-                <div>
-                  <p class="text-sm uppercase tracking-[0.32em] text-blue-100/80 mb-4">高效集成 • 云端服务 • 智能平台</p>
-                  <h2 class="text-4xl md:text-5xl font-semibold mb-4">让每一次访问都像海外官网</h2>
-                  <p class="text-base md:text-lg text-slate-100/90 max-w-xl">
-                    右侧展示富媒体视觉，左侧简洁内容入口，主页即刻呈现高质感品牌形象。
-                  </p>
-                </div>
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                  <div class="rounded-3xl bg-white/10 p-5 backdrop-blur-sm border border-white/10">
-                    <p class="text-sm text-slate-200">产品速度</p>
-                    <p class="text-2xl font-semibold">超快</p>
-                  </div>
-                  <div class="rounded-3xl bg-white/10 p-5 backdrop-blur-sm border border-white/10">
-                    <p class="text-sm text-slate-200">界面风格</p>
-                    <p class="text-2xl font-semibold">国际范</p>
-                  </div>
+          <!-- Right: Hero Video Placeholder -->
+          <div class="fade-in" style="transition-delay: 450ms;">
+            <div class="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-sm border border-white/20 relative">
+              <!-- Video will be added here -->
+              <div class="absolute inset-0 flex items-center justify-center text-white/60">
+                <div class="text-center">
+                  <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <p class="text-sm">演示视频占位区域</p>
+                  <p class="text-xs mt-2 text-white/40">后续将添加产品操作演示视频</p>
                 </div>
               </div>
+
+              <!-- Uncomment and update when video is ready:
+              <video autoplay muted loop playsinline poster="assets/images/video-poster.jpg" class="w-full h-full object-cover">
+                <source src="assets/images/hero-demo.mp4" type="video/mp4">
+                您的浏览器不支持视频播放
+              </video>
+              -->
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Product Overview Section -->
-    <section class="bg-gray-50 py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <p class="text-sm uppercase tracking-[0.24em] text-blue-600 font-medium">产品简介</p>
-          <h2 class="mt-4 text-4xl font-bold text-gray-900">一眼了解我们的核心产品</h2>
-          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">在主页向下滑动即可查看多个产品模块，每个模块都直接提供跳转按钮，无需依赖顶部导航。</p>
+    <!-- Product Matrix Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16 fade-in">
+          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">产品矩阵</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">按场景分类的核心产品</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            这里是产品矩阵简介的占位文案。后续将替换为实际的产品体系描述，说明各产品如何协同工作以满足不同用户需求。
+          </p>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2">
-          <article class="rounded-[2rem] bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-4">产品1</span>
-            <h3 class="text-2xl font-bold text-gray-900 mb-3">产品1：产品1的功能</h3>
-            <p class="text-gray-600 mb-6">产品1：产品1的功能。产品1专注于优化用户体验，支持快速部署与灵活扩展。</p>
-            <a href="products.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors duration-200">
-              查看产品1
-            </a>
-          </article>
+        <!-- Group 1: Creation Flow -->
+        <div class="card p-8 mb-8 fade-in">
+          <div class="mb-6">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-2">创作流</h3>
+            <p class="text-gray-600">录屏 → 剪辑 → 格式转换，一站式内容创作解决方案</p>
+          </div>
 
-          <article class="rounded-[2rem] bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-sm font-semibold mb-4">产品2</span>
-            <h3 class="text-2xl font-bold text-gray-900 mb-3">产品2：产品2的功能</h3>
-            <p class="text-gray-600 mb-6">产品2：产品2的功能。产品2提供安全稳定的服务接口，并支持跨平台交互。</p>
-            <a href="source.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-colors duration-200">
-              查看源码
-            </a>
-          </article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Product Item 1 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 100ms;">
+              <div class="icon-placeholder icon-gradient-1 mb-4">P1</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品1名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品1的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
 
-          <article class="rounded-[2rem] bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold mb-4">产品3</span>
-            <h3 class="text-2xl font-bold text-gray-900 mb-3">产品3：产品3的功能</h3>
-            <p class="text-gray-600 mb-6">产品3：产品3的功能。产品3覆盖完整的下载与安装体验，助力企业快速上线。</p>
-            <a href="download.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors duration-200">
-              立即下载
-            </a>
-          </article>
+            <!-- Product Item 2 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 200ms;">
+              <div class="icon-placeholder icon-gradient-2 mb-4">P2</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品2名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品2的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
 
-          <article class="rounded-[2rem] bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-slate-50 text-slate-700 text-sm font-semibold mb-4">产品4</span>
-            <h3 class="text-2xl font-bold text-gray-900 mb-3">产品4：产品4的功能</h3>
-            <p class="text-gray-600 mb-6">产品4：产品4的功能。这里是对产品4的展示文案，占位说明未来功能与价值。</p>
-            <a href="about.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors duration-200">
-              了解更多
-            </a>
-          </article>
+            <!-- Product Item 3 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 300ms;">
+              <div class="icon-placeholder icon-gradient-3 mb-4">P3</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品3名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品3的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 2: Efficiency Flow -->
+        <div class="card p-8 mb-8 fade-in">
+          <div class="mb-6">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-2">效率流</h3>
+            <p class="text-gray-600">投屏 → 扩展屏 → 屏幕共享，提升工作效率的工具集</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Product Item 4 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 100ms;">
+              <div class="icon-placeholder icon-gradient-4 mb-4">P4</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品4名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品4的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Product Item 5 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 200ms;">
+              <div class="icon-placeholder icon-gradient-5 mb-4">P5</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品5名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品5的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Product Item 6 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 300ms;">
+              <div class="icon-placeholder icon-gradient-6 mb-4">P6</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品6名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品6的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 3: Security Flow -->
+        <div class="card p-8 fade-in">
+          <div class="mb-6">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-2">安全流</h3>
+            <p class="text-gray-600">加密、加水印，保护您的数字资产安全</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Product Item 7 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 100ms;">
+              <div class="icon-placeholder icon-gradient-1 mb-4">P7</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品7名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品7的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Product Item 8 -->
+            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 200ms;">
+              <div class="icon-placeholder icon-gradient-2 mb-4">P8</div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品8名称</h4>
+              <p class="text-sm text-gray-600 mb-4">这里是产品8的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
+              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
+                了解详情
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Trust Section -->
+    <section class="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+      <!-- Background Watermark -->
+      <div class="absolute inset-0 opacity-5">
+        <svg class="w-full h-full" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
+          <path d="M50 250 Q250 100 500 250 T950 250" stroke="currentColor" fill="none" stroke-width="1"/>
+          <path d="M50 200 Q250 50 500 200 T950 200" stroke="currentColor" fill="none" stroke-width="0.5"/>
+          <path d="M50 300 Q250 150 500 300 T950 300" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12 fade-in">
+          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">数据信任</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">用数字证明实力</h2>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <!-- Stat 1 -->
+          <div class="text-center fade-in">
+            <div class="counter text-5xl md:text-6xl font-bold text-blue-600 mb-2" data-target="12345" data-duration="1500">0</div>
+            <p class="text-gray-600 text-lg">首页访客数</p>
+            <p class="text-sm text-gray-400 mt-1">（占位数字，待接入真实统计）</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="text-center fade-in" style="transition-delay: 150ms;">
+            <div class="counter text-5xl md:text-6xl font-bold text-blue-600 mb-2" data-target="8900" data-duration="1500">0</div>
+            <p class="text-gray-600 text-lg">产品下载总数</p>
+            <p class="text-sm text-gray-400 mt-1">（占位数字，待接入GitHub API）</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="text-center fade-in" style="transition-delay: 300ms;">
+            <div class="counter text-5xl md:text-6xl font-bold text-blue-600 mb-2" data-target="5" data-duration="1500">0</div>
+            <p class="text-gray-600 text-lg">开源项目数</p>
+            <p class="text-sm text-gray-400 mt-1">持续更新中</p>
+          </div>
+        </div>
+
+        <!-- Testimonials Carousel (Placeholder) -->
+        <div class="max-w-2xl mx-auto fade-in" style="transition-delay: 450ms;">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
+            <svg class="w-8 h-8 text-blue-200 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-gray-600 italic mb-4">
+              "这里是用户评价占位文案。后续将替换为真实的用户短评或合作方推荐语，增强社会证明效果。"
+            </p>
+            <p class="text-sm text-gray-400">— 用户名 / 公司名称</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">准备好开始了吗？</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          这里是行动号召的占位文案。引导用户进行下一步操作，如下载产品、查看文档或联系团队。
+        </p>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4">
+          <a href="download.html" class="btn btn-primary">
+            立即下载
+          </a>
+          <a href="about.html" class="btn btn-outline">
+            联系我们
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white py-8">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="text-sm text-gray-500">&copy; 2026 jumpengine 版权所有</p>
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <!-- Column 1: Products -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
+            <li><a href="download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
+            <li><a href="source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Support -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">支持</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">关于</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
+            <li><a href="about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">法律</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">隐私政策</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">服务条款</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">开源协议</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 Jumpengine. 保留所有权利。</p>
+        <p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="assets/js/main.js" defer></script>
+  <!-- Quick Actions Float Panel -->
+  <aside id="quick-actions" class="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3">
+    <!-- Consult Button -->
+    <button data-action="consult" class="w-12 h-12 glass rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 flex items-center justify-center text-gray-600 hover:text-blue-600" aria-label="在线咨询">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+      </svg>
+    </button>
+
+    <!-- Feedback Button -->
+    <button data-action="feedback" class="w-12 h-12 glass rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 flex items-center justify-center text-gray-600 hover:text-blue-600" aria-label="意见反馈">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+      </svg>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button data-action="back-to-top" class="w-12 h-12 glass rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 flex items-center justify-center text-gray-600 hover:text-blue-600" aria-label="返回顶部">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+      </svg>
+    </button>
+  </aside>
+
 </body>
 </html>
