@@ -20,29 +20,21 @@
   <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50 border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <a href="./index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+        <a href="../index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
           JumpEngine
         </a>
 
         <nav class="hidden md:flex space-x-8">
-          <a href="./index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="../index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             主页
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="./products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="../products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             产品
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="./source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
-            源码
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="./about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+          <a href="../about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             关于
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="./download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
-            下载
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
@@ -57,11 +49,9 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
       <div class="px-4 py-3 space-y-2">
-        <a href="./index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
-        <a href="./products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
-        <a href="./source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
-        <a href="./about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
-        <a href="./download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
+        <a href="../index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="../products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="../about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
       </div>
     </div>
   </header>
@@ -69,7 +59,7 @@
   <div class="h-16"></div>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section with Large Download Button -->
     <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center fade-in">
@@ -90,10 +80,19 @@
             <!-- Dynamically rendered -->
           </div>
 
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="./v1.0.0/" class="btn btn-primary px-8 py-3 text-lg version-link">
-              选择版本
+          <!-- Large Download Button -->
+          <div class="mb-12">
+            <a href="./releases.html" class="btn btn-primary px-12 py-4 text-xl font-semibold inline-flex items-center gap-3 shadow-lg hover:shadow-xl transition-shadow">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              立即下载
             </a>
+            <p class="text-sm text-gray-500 mt-3">查看所有版本和更新历史</p>
+          </div>
+
+          <!-- Repository Links -->
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="#" target="_blank" class="btn btn-outline px-8 py-3 text-lg repo-link">
               查看源码
             </a>
@@ -134,24 +133,8 @@
       </div>
     </section>
 
-    <!-- Download Section -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16 fade-in">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">获取本产品</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            选择适合您的版本和平台，立即开始使用
-          </p>
-        </div>
-
-        <div id="download-section" class="max-w-4xl mx-auto">
-          <!-- Dynamically rendered by JavaScript -->
-        </div>
-      </div>
-    </section>
-
     <!-- Version History Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16 fade-in">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">版本历史</h2>
@@ -162,6 +145,15 @@
 
         <div id="version-timeline" class="max-w-3xl mx-auto">
           <!-- Dynamically rendered by JavaScript -->
+        </div>
+
+        <div class="text-center mt-12 fade-in">
+          <a href="./releases.html" class="btn btn-outline px-8 py-3 inline-flex items-center gap-2">
+            查看全部版本
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -174,9 +166,7 @@
         <div>
           <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="./products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
-            <li><a href="./download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
-            <li><a href="./source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
+            <li><a href="../products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
           </ul>
         </div>
 
@@ -192,8 +182,8 @@
         <div>
           <h4 class="font-semibold text-gray-900 mb-4">关于</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="./about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
-            <li><a href="./about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
+            <li><a href="../about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
+            <li><a href="../about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
             <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li>
           </ul>
         </div>
@@ -245,7 +235,6 @@
         document.querySelector('.version-badge').textContent = 'v' + product.version;
         document.querySelector('.product-name').textContent = product.name;
         document.querySelector('.product-description').textContent = product.description;
-        document.querySelector('.version-link').href = './v' + product.version + '/';
         document.querySelector('.repo-link').href = product.repo.github;
 
         // Render tech stack
@@ -288,69 +277,19 @@
           `).join('');
         }
 
-        // Render download section
-        const downloadContainer = document.getElementById('download-section');
-        if (downloadContainer && product.versions && product.versions.length > 0) {
-          const version = product.versions[0];
-          const downloads = version.downloads;
-
-          downloadContainer.innerHTML = `
-            <div class="card p-8 fade-in">
-              <div class="flex items-center justify-between mb-6">
-                <div>
-                  <h3 class="text-2xl font-semibold text-gray-900 mb-2">最新版本 v${version.version}</h3>
-                  <p class="text-gray-600">发布日期：${version.releaseDate} | 文件大小：${version.fileSize}</p>
-                </div>
-                <span class="px-4 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium">稳定版</span>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                ${downloads.windows.installer ? `
-                  <a href="${downloads.windows.installer.url}" class="btn btn-primary flex items-center justify-center gap-2 py-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg>
-                    <div class="text-left">
-                      <div class="font-semibold">Windows 安装包</div>
-                      <div class="text-sm opacity-90">推荐 · 自动安装</div>
-                    </div>
-                  </a>
-                ` : ''}
-
-                ${downloads.windows.portable ? `
-                  <a href="${downloads.windows.portable.url}" class="btn btn-outline flex items-center justify-center gap-2 py-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg>
-                    <div class="text-left">
-                      <div class="font-semibold">Windows 便携版</div>
-                      <div class="text-sm opacity-90">无需安装 · 即开即用</div>
-                    </div>
-                  </a>
-                ` : ''}
-              </div>
-
-              <div class="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p class="text-sm text-blue-800">
-                  <strong>系统要求：</strong>Windows 10 或更高版本，64位操作系统
-                </p>
-              </div>
-            </div>
-          `;
-        }
-
-        // Render version history
+        // Render version history (show latest 3 versions)
         const timelineContainer = document.getElementById('version-timeline');
         if (timelineContainer && product.versions) {
-          timelineContainer.innerHTML = product.versions.map((version, index) => `
+          const recentVersions = product.versions.slice(0, 3);
+          timelineContainer.innerHTML = recentVersions.map((version, index) => `
             <div class="timeline-item fade-in" style="--delay: ${index * 150}ms;">
               <div class="flex items-baseline gap-4 mb-2">
                 <h3 class="text-lg font-semibold text-gray-900">v${version.version}</h3>
                 <span class="text-sm text-gray-500">${version.releaseDate}</span>
               </div>
-              <p class="text-gray-600">${version.changelog}</p>
-              <a href="./v${version.version}/download.html" class="text-blue-600 hover:text-blue-700 text-sm mt-2 inline-block">
-                查看该版本下载选项 &rarr;
+              <p class="text-gray-600">${version.changelog.substring(0, 100)}...</p>
+              <a href="./v${version.version}/" class="text-blue-600 hover:text-blue-700 text-sm mt-2 inline-block">
+                查看版本详情 &rarr;
               </a>
             </div>
           `).join('');

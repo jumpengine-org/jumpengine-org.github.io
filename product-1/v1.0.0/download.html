@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>下载 Mathbox v2.0.0</title>
-  <meta name="description" content="下载 Mathbox v2.0.0，支持 Windows 安装包和便携版">
+  <title>下载 产品一 v1.0.0 - 选择平台</title>
+  <meta name="description" content="下载 产品一 v1.0.0，支持 Windows、macOS、Linux 和源码版本">
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
 
+  <!-- Navigation -->
   <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50 border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <a href="../../index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">JumpEngine</a>
         <nav class="hidden md:flex space-x-8">
           <a href="../../index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">主页<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
-          <a href="../../products/products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">产品<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
-          <a href="../../source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">源码<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">产品<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
           <a href="../../about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">关于<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
-          <a href="../../download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">下载<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
         </nav>
         <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -28,10 +30,8 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
       <div class="px-4 py-3 space-y-2">
         <a href="../../index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
-        <a href="../../products/products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
-        <a href="../../source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="../../products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
         <a href="../../about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
-        <a href="../../download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
       </div>
     </div>
   </header>
@@ -39,59 +39,137 @@
   <div class="h-16"></div>
 
   <main>
+    <!-- Hero Section -->
     <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
       <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-12 fade-in">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">下载 Mathbox v2.0.0</h1>
-            <p class="text-gray-600">选择适合您的平台和版本</p>
+        <div class="max-w-4xl mx-auto text-center fade-in">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">下载 产品一 v1.0.0</h1>
+          <p class="text-xl text-gray-600 mb-6">选择适合您的平台和版本类型</p>
+          <a href="./index.html" class="text-blue-600 hover:text-blue-700 inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            返回使用说明
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Selection -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <!-- Platform Tabs -->
+          <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in">
+            <button class="platform-tab active px-6 py-3 bg-blue-600 text-white rounded-lg font-medium transition-colors" data-platform="windows">
+              Windows
+            </button>
+            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-platform="macos">
+              macOS
+            </button>
+            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-platform="linux">
+              Linux
+            </button>
+            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-platform="source">
+              源码
+            </button>
           </div>
 
-          <div class="flex justify-center gap-4 mb-12 fade-in">
-            <button class="platform-tab active px-6 py-3 bg-blue-600 text-white rounded-lg font-medium" data-platform="windows">Windows</button>
-            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200" data-platform="mac">macOS</button>
-            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200" data-platform="linux">Linux</button>
-          </div>
-
+          <!-- Download Options Container -->
           <div id="download-options" class="space-y-6">
-            <!-- Dynamically rendered -->
+            <!-- Dynamically rendered by JavaScript -->
           </div>
 
+          <!-- Installation Instructions -->
           <div class="mt-12 card p-8 fade-in">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">安装说明</h2>
             <div class="space-y-6">
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">1</div>
-                <div><h3 class="text-lg font-semibold text-gray-900 mb-2">下载安装包</h3><p class="text-gray-600">点击上方下载按钮，选择合适的版本进行下载</p></div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">选择平台</h3>
+                  <p class="text-gray-600">根据您的操作系统选择对应的平台标签页</p>
+                </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">2</div>
-                <div><h3 class="text-lg font-semibold text-gray-900 mb-2">运行安装程序</h3><p class="text-gray-600">双击下载的安装包，按照提示完成安装</p></div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">选择版本类型</h3>
+                  <p class="text-gray-600">根据您的需求选择安装包、便携版或源码版本</p>
+                </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">3</div>
-                <div><h3 class="text-lg font-semibold text-gray-900 mb-2">启动使用</h3><p class="text-gray-600">安装完成后，从开始菜单或桌面快捷方式启动应用</p></div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">下载并安装</h3>
+                  <p class="text-gray-600">点击下载按钮，等待下载完成后按照说明进行安装或使用</p>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- System Requirements -->
           <div class="mt-8 card p-8 fade-in">
             <h2 class="text-2xl font-bold text-gray-900 mb-4">系统要求</h2>
-            <ul class="space-y-2 text-gray-600">
-              <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Windows 10 或更高版本</li>
-              <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>64位操作系统</li>
-              <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>至少 2GB 可用磁盘空间</li>
-            </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Windows</h3>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    Windows 10 或更高版本
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    64位操作系统
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    至少 2GB 可用磁盘空间
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">macOS / Linux</h3>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    macOS 10.15+ 或主流 Linux 发行版
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    Python 3.8+ 环境（源码版）
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    至少 2GB 可用磁盘空间
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-50 py-12 border-t border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-        <div><h4 class="font-semibold text-gray-900 mb-4">产品</h4><ul class="space-y-2 text-sm"><li><a href="../../products/products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li><li><a href="../../download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li><li><a href="../../source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li></ul></div>
+        <div><h4 class="font-semibold text-gray-900 mb-4">产品</h4><ul class="space-y-2 text-sm"><li><a href="../../products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li></ul></div>
         <div><h4 class="font-semibold text-gray-900 mb-4">支持</h4><ul class="space-y-2 text-sm"><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li></ul></div>
         <div><h4 class="font-semibold text-gray-900 mb-4">关于</h4><ul class="space-y-2 text-sm"><li><a href="../../about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li><li><a href="../../about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li></ul></div>
       </div>
@@ -99,67 +177,295 @@
     </div>
   </footer>
 
+  <!-- JavaScript -->
   <script src="../../assets/js/NavController.js"></script>
   <script src="../../assets/js/ScrollObserver.js"></script>
   <script src="../../assets/js/ProductManager.js"></script>
   <script src="../../assets/js/main.js"></script>
 
   <script>
+    const PRODUCT_ID = 'product-1';
+    const CURRENT_VERSION = '1.0.0';
+
     document.addEventListener('DOMContentLoaded', async () => {
       if (typeof initNavigation === 'function') initNavigation();
       if (typeof initMobileMenu === 'function') initMobileMenu();
 
       await productManager.loadProducts();
-      const product = productManager.getProductById('mathbox');
-      const version = product.versions.find(v => v.version === '2.0.0');
+      const product = productManager.getProductById(PRODUCT_ID);
+      const version = product ? product.versions.find(v => v.version === CURRENT_VERSION) : null;
 
-      if (version) {
-        const downloads = version.downloads;
-        const container = document.getElementById('download-options');
+      // Render download options for all platforms
+      renderAllPlatforms(version);
 
-        container.innerHTML = `
-          <div class="card p-8 fade-in" data-platform="windows">
-            <h3 class="text-xl font-semibold text-gray-900 mb-6">Windows 版本</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              ${downloads.windows.installer ? `
-                <div class="border-2 border-blue-100 rounded-xl p-6 hover:border-blue-300 transition-colors">
-                  <div class="flex items-start gap-4 mb-4">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"><svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
-                    <div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-1">安装包版本</h4><p class="text-sm text-gray-600 mb-2">推荐大多数用户使用</p><p class="text-xs text-gray-500">文件大小：${version.fileSize}</p></div>
-                  </div>
-                  <a href="${downloads.windows.installer.url}" class="btn btn-primary w-full py-3 flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>下载安装包</a>
-                  <div class="mt-4 text-xs text-gray-500"><p>SHA256: ${downloads.windows.installer.sha256.substring(0, 16)}...</p></div>
-                </div>
-              ` : ''}
-              ${downloads.windows.portable ? `
-                <div class="border-2 border-gray-100 rounded-xl p-6 hover:border-gray-300 transition-colors">
-                  <div class="flex items-start gap-4 mb-4">
-                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center"><svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
-                    <div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-1">便携版</h4><p class="text-sm text-gray-600 mb-2">无需安装，即开即用</p><p class="text-xs text-gray-500">文件大小：${version.fileSize}</p></div>
-                  </div>
-                  <a href="${downloads.windows.portable.url}" class="btn btn-outline w-full py-3 flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>下载便携版</a>
-                  <div class="mt-4 text-xs text-gray-500"><p>SHA256: ${downloads.windows.portable.sha256.substring(0, 16)}...</p></div>
-                </div>
-              ` : ''}
-            </div>
-          </div>
-        `;
+      // Initialize platform tab switching
+      initPlatformTabs();
 
-        if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
-          scrollObserver.observeAll(container.querySelectorAll('.fade-in'));
-        }
+      if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
+        scrollObserver.observeAll(document.querySelectorAll('.fade-in'));
+      }
+    });
+
+    function renderAllPlatforms(version) {
+      const container = document.getElementById('download-options');
+      if (!version) {
+        container.innerHTML = '<p class="text-center text-gray-500 py-8">暂无可用下载选项</p>';
+        return;
       }
 
-      // Platform tab switching
+      const fileSize = version.fileSize || '待更新';
+
+      container.innerHTML = `
+        <!-- Windows Platform -->
+        <div class="download-panel" data-platform="windows">
+          <div class="card p-8 fade-in">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4h-13.05M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+              </svg>
+              Windows 版本
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Installer Version -->
+              <div class="border-2 border-blue-100 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">安装包版本</h4>
+                    <p class="text-sm text-gray-600 mb-2">推荐大多数用户使用，包含自动安装程序</p>
+                    <p class="text-xs text-gray-500">文件大小：${fileSize}</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  下载安装包
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">.exe 安装程序</p>
+              </div>
+
+              <!-- Portable Version -->
+              <div class="border-2 border-gray-100 rounded-xl p-6 hover:border-gray-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">便携版（程序文件夹）</h4>
+                    <p class="text-sm text-gray-600 mb-2">无需安装，解压即可使用，可放在U盘中携带</p>
+                    <p class="text-xs text-gray-500">文件大小：${fileSize}</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-outline w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  下载便携版
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">.zip 压缩包</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- macOS Platform -->
+        <div class="download-panel hidden" data-platform="macos">
+          <div class="card p-8 fade-in">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <svg class="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              macOS 版本
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- DMG Installer -->
+              <div class="border-2 border-blue-100 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">DMG 安装包</h4>
+                    <p class="text-sm text-gray-600 mb-2">标准的 macOS 安装方式，拖拽到应用程序文件夹</p>
+                    <p class="text-xs text-gray-500">文件大小：${fileSize}</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  下载 DMG
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">.dmg 镜像文件</p>
+              </div>
+
+              <!-- App Bundle -->
+              <div class="border-2 border-gray-100 rounded-xl p-6 hover:border-gray-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">应用程序包</h4>
+                    <p class="text-sm text-gray-600 mb-2">独立的 .app 文件，直接运行无需安装</p>
+                    <p class="text-xs text-gray-500">文件大小：${fileSize}</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-outline w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  下载 App
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">.app 应用程序</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linux Platform -->
+        <div class="download-panel hidden" data-platform="linux">
+          <div class="card p-8 fade-in">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <svg class="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 1.2c5.964 0 10.8 4.836 10.8 10.8S17.964 22.8 12 22.8 1.2 17.964 1.2 12 6.036 1.2 12 1.2zm0 4.8c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/>
+              </svg>
+              Linux 版本（源代码）
+            </h3>
+
+            <div class="grid grid-cols-1 gap-6">
+              <!-- Source Code Package -->
+              <div class="border-2 border-yellow-100 rounded-xl p-6 hover:border-yellow-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">Python 源代码包</h4>
+                    <p class="text-sm text-gray-600 mb-2">完整的 Python 源代码，需要自行安装依赖并运行</p>
+                    <p class="text-xs text-gray-500">文件大小：${fileSize}</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  下载源代码
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">.tar.gz 源码压缩包</p>
+                <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                  <p class="text-xs text-yellow-800">
+                    <strong>注意：</strong>需要 Python 3.8+ 环境和 pip 包管理器。安装依赖后运行 <code class="px-2 py-1 bg-yellow-100 rounded">python main.py</code> 启动应用。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Source Code Platform -->
+        <div class="download-panel hidden" data-platform="source">
+          <div class="card p-8 fade-in">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+              通用源码版本
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Full Source Code -->
+              <div class="border-2 border-purple-100 rounded-xl p-6 hover:border-purple-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">完整源码包</h4>
+                    <p class="text-sm text-gray-600 mb-2">包含所有源代码、资源和配置文件</p>
+                    <p class="text-xs text-gray-500">文件大小：${fileSize}</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  下载完整源码
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">.zip 完整项目压缩包</p>
+              </div>
+
+              <!-- GitHub Repository -->
+              <div class="border-2 border-gray-100 rounded-xl p-6 hover:border-gray-300 transition-colors">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-1">GitHub 仓库</h4>
+                    <p class="text-sm text-gray-600 mb-2">访问 GitHub 仓库查看最新代码和提交历史</p>
+                    <p class="text-xs text-gray-500">在线浏览</p>
+                  </div>
+                </div>
+                <a href="#" target="_blank" class="btn btn-outline w-full py-3 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  访问 GitHub
+                </a>
+                <p class="mt-3 text-xs text-gray-500 text-center">在线浏览和克隆</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function initPlatformTabs() {
       const tabs = document.querySelectorAll('.platform-tab');
+      const panels = document.querySelectorAll('.download-panel');
+
       tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-          tabs.forEach(t => { t.classList.remove('active', 'bg-blue-600', 'text-white'); t.classList.add('bg-gray-100', 'text-gray-700'); });
+          // Update tab styles
+          tabs.forEach(t => {
+            t.classList.remove('active', 'bg-blue-600', 'text-white');
+            t.classList.add('bg-gray-100', 'text-gray-700');
+          });
           tab.classList.add('active', 'bg-blue-600', 'text-white');
           tab.classList.remove('bg-gray-100', 'text-gray-700');
+
+          // Show corresponding panel
+          const platform = tab.dataset.platform;
+          panels.forEach(panel => {
+            if (panel.dataset.platform === platform) {
+              panel.classList.remove('hidden');
+            } else {
+              panel.classList.add('hidden');
+            }
+          });
         });
       });
-    });
+    }
   </script>
 </body>
 </html>
