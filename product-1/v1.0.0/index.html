@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品一 v1.0.0 - 版本详情</title>
+  <meta name="description" content="产品一 v1.0.0 版本详细信息和下载选项">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../../index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">JumpEngine</a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="../../index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">主页<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">产品<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">源码<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">关于<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">下载<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+        </nav>
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="../../index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="../../products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="../../source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="../../about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
+        <a href="../../download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="h-16"></div>
+
+  <main>
+    <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center fade-in">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6"><span class="version-badge">v1.0.0</span></div>
+          <h1 class="text-4xl font-bold text-gray-900 mb-4 product-title">产品一 v1.0.0</h1>
+          <p class="text-gray-600 mb-6 version-info">发布日期：2026-05-28 | 文件大小：待更新</p>
+          <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-left">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">更新内容</h3>
+            <p class="text-gray-600 changelog">初始版本发布，提供核心功能模块，后续将持续迭代更新</p>
+          </div>
+          <div class="mt-8">
+            <a href="download.html" class="btn btn-primary px-8 py-3 text-lg">下载此版本</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12 fade-in"><h2 class="text-2xl font-bold text-gray-900 mb-4">其他版本</h2></div>
+        <div id="other-versions" class="max-w-2xl mx-auto space-y-4">
+          <p class="text-gray-600 text-center">暂无其他版本</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div><h4 class="font-semibold text-gray-900 mb-4">产品</h4><ul class="space-y-2 text-sm"><li><a href="../../products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li><li><a href="../../download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li><li><a href="../../source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li></ul></div>
+        <div><h4 class="font-semibold text-gray-900 mb-4">支持</h4><ul class="space-y-2 text-sm"><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li></ul></div>
+        <div><h4 class="font-semibold text-gray-900 mb-4">关于</h4><ul class="space-y-2 text-sm"><li><a href="../../about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li><li><a href="../../about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li></ul></div>
+      </div>
+      <div class="pt-8 border-t border-gray-200 text-center"><p class="text-sm text-gray-500">&copy; 2026 JumpEngine. 保留所有权利。</p><p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p></div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/NavController.js"></script>
+  <script src="../../assets/js/ScrollObserver.js"></script>
+  <script src="../../assets/js/ProductManager.js"></script>
+  <script src="../../assets/js/main.js"></script>
+
+  <script>
+    const PRODUCT_ID = 'product-1';
+    const CURRENT_VERSION = '1.0.0';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (typeof initNavigation === 'function') initNavigation();
+      if (typeof initMobileMenu === 'function') initMobileMenu();
+
+      await productManager.loadProducts();
+      const product = productManager.getProductById(PRODUCT_ID);
+
+      if (product) {
+        // Update page content
+        document.querySelector('.version-badge').textContent = 'v' + CURRENT_VERSION;
+        document.querySelector('.product-title').textContent = product.shortName + ' v' + CURRENT_VERSION;
+        
+        const version = product.versions.find(v => v.version === CURRENT_VERSION);
+        if (version) {
+          document.querySelector('.version-info').textContent = '发布日期：' + version.releaseDate + ' | 文件大小：' + version.fileSize;
+          document.querySelector('.changelog').textContent = version.changelog;
+        }
+
+        // Render other versions
+        const otherVersions = product.versions.filter(v => v.version !== CURRENT_VERSION);
+        const container = document.getElementById('other-versions');
+        if (otherVersions.length > 0) {
+          container.innerHTML = otherVersions.map(version => `
+            <div class="card p-6 fade-in">
+              <div class="flex items-center justify-between">
+                <div><h3 class="text-lg font-semibold text-gray-900">v${version.version}</h3><p class="text-sm text-gray-600">${version.releaseDate}</p></div>
+                <a href="../${product.id}/v${version.version}/download.html" class="btn btn-outline text-sm">查看下载</a>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
+          scrollObserver.observeAll(container.querySelectorAll('.fade-in'));
+        }
+      }
+    });
+  </script>
+</body>
+</html>

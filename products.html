@@ -16,6 +16,7 @@
   <script src="assets/js/ScrollObserver.js" defer></script>
   <script src="assets/js/Counter.js" defer></script>
   <script src="assets/js/NavController.js" defer></script>
+  <script src="assets/js/ProductManager.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -95,173 +96,10 @@
     <!-- Product Groups -->
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
-        <!-- Group 1: Group 1 -->
-        <div class="fade-in">
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">第一类</h2>
-            <p class="text-gray-600">这里是第一类的功能简介占位文案，后续将替换为真实的介绍文案</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Product Card 1 -->
-            <div class="card p-6 stagger-item" style="--delay: 100ms;">
-              <div class="icon-placeholder icon-gradient-1 mb-4">P1</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品1名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品1的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-
-            <!-- Product Card 2 -->
-            <div class="card p-6 stagger-item" style="--delay: 200ms;">
-              <div class="icon-placeholder icon-gradient-2 mb-4">P2</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品2名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品2的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-
-            <!-- Product Card 3 -->
-            <div class="card p-6 stagger-item" style="--delay: 300ms;">
-              <div class="icon-placeholder icon-gradient-3 mb-4">P3</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品3名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品3的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-          </div>
+        <!-- Dynamically rendered by JavaScript -->
+        <div id="products-container">
+          <!-- Products will be loaded here -->
         </div>
-
-        <!-- Group 2: Group 2 -->
-        <div class="fade-in">
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">第二类</h2>
-            <p class="text-gray-600">这里是第二类的功能简介占位文案，后续将替换为真实的介绍文案</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Product Card 4 -->
-            <div class="card p-6 stagger-item" style="--delay: 100ms;">
-              <div class="icon-placeholder icon-gradient-4 mb-4">P4</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品4名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品4的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-
-            <!-- Product Card 5 -->
-            <div class="card p-6 stagger-item" style="--delay: 200ms;">
-              <div class="icon-placeholder icon-gradient-5 mb-4">P5</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品5名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品5的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-
-            <!-- Product Card 6 -->
-            <div class="card p-6 stagger-item" style="--delay: 300ms;">
-              <div class="icon-placeholder icon-gradient-6 mb-4">P6</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品6名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品6的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Group 3: Group 3 -->
-        <div class="fade-in">
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">第三类</h2>
-            <p class="text-gray-600">这里是第三类的功能简介占位文案，后续将替换为真实的介绍文案</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Product Card 7 -->
-            <div class="card p-6 stagger-item" style="--delay: 100ms;">
-              <div class="icon-placeholder icon-gradient-1 mb-4">P7</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品7名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品7的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-
-            <!-- Product Card 8 -->
-            <div class="card p-6 stagger-item" style="--delay: 200ms;">
-              <div class="icon-placeholder icon-gradient-2 mb-4">P8</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">产品8名称</h3>
-              <p class="text-gray-600 text-sm mb-6">
-                这里是产品8的详细功能简介占位文案。说明产品的核心功能、技术特点和适用场景，帮助用户快速了解产品价值。
-              </p>
-              <div class="flex gap-3">
-                <a href="download.html" class="btn btn-primary flex-1 text-sm py-2">
-                  下载
-                </a>
-                <a href="#" class="btn btn-outline flex-1 text-sm py-2">
-                  详情
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 

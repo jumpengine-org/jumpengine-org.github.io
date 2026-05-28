@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JumpEngine 产品一 - 占位标题</title>
+  <meta name="keywords" content="关键词一, 关键词二, 关键词三">
+  <meta name="description" content="这里是产品一的占位描述文案">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/product-page.css">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- Navigation -->
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="./index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          JumpEngine
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+          <a href="./index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+            主页
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="./products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+            产品
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="./source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+            源码
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="./about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+            关于
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="./download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
+            下载
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </nav>
+
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="./index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="./products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="./source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="./about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
+        <a href="./download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="h-16"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
+            <span class="version-badge">v1.0.0</span>
+            <span class="px-2 py-0.5 bg-blue-600 text-white rounded text-xs">最新</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 product-name">
+            JumpEngine 产品一
+          </h1>
+
+          <p class="text-xl text-gray-600 mb-8 product-description">
+            这里是产品一的占位描述文案
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-3 mb-8 tech-stack">
+            <!-- Dynamically rendered -->
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="./v1.0.0/" class="btn btn-primary px-8 py-3 text-lg version-link">
+              选择版本
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline px-8 py-3 text-lg repo-link">
+              查看源码
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">核心特性</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            为什么选择本产品？我们为您提供全面的解决方案
+          </p>
+        </div>
+
+        <div id="features-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Dynamically rendered by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">功能模块</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            覆盖各个领域，满足学习和工作需求
+          </p>
+        </div>
+
+        <div id="modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically rendered by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">获取本产品</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            选择适合您的版本和平台，立即开始使用
+          </p>
+        </div>
+
+        <div id="download-section" class="max-w-4xl mx-auto">
+          <!-- Dynamically rendered by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Version History Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">版本历史</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            了解本产品的演进历程和最新更新
+          </p>
+        </div>
+
+        <div id="version-timeline" class="max-w-3xl mx-auto">
+          <!-- Dynamically rendered by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
+            <li><a href="./download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
+            <li><a href="./source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">支持</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">关于</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li>
+            <li><a href="./about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 JumpEngine. 保留所有权利。</p>
+        <p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="./assets/js/NavController.js"></script>
+  <script src="./assets/js/ScrollObserver.js"></script>
+  <script src="./assets/js/Counter.js"></script>
+  <script src="./assets/js/ProductManager.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <script>
+    const PRODUCT_ID = 'product-3';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize navigation
+      if (typeof initNavigation === 'function') {
+        initNavigation();
+      }
+      if (typeof initMobileMenu === 'function') {
+        initMobileMenu();
+      }
+
+      // Load product data and render detail page
+      await productManager.loadProducts();
+      const product = productManager.getProductById(PRODUCT_ID);
+
+      if (product) {
+        // Update page title and meta tags
+        document.title = product.name + ' - 占位标题';
+        const existingKeywords = document.querySelector('meta[name="keywords"]');
+        const existingDesc = document.querySelector('meta[name="description"]');
+        if (existingKeywords) existingKeywords.content = product.keywords.join(', ');
+        if (existingDesc) existingDesc.content = product.description;
+
+        // Inject additional SEO meta tags
+        const metaTags = productManager.generateMetaTags(product);
+        document.head.insertAdjacentHTML('beforeend', metaTags);
+
+        // Update hero section
+        document.querySelector('.version-badge').textContent = 'v' + product.version;
+        document.querySelector('.product-name').textContent = product.name;
+        document.querySelector('.product-description').textContent = product.description;
+        document.querySelector('.version-link').href = './v' + product.version + '/';
+        document.querySelector('.repo-link').href = product.repo.github;
+
+        // Render tech stack
+        const techStackContainer = document.querySelector('.tech-stack');
+        techStackContainer.innerHTML = product.techStack.map(tech =>
+          '<span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm">' + tech + '</span>'
+        ).join('');
+
+        // Render features
+        const featuresContainer = document.getElementById('features-grid');
+        if (featuresContainer && product.features) {
+          featuresContainer.innerHTML = product.features.map((feature, index) => `
+            <div class="card p-6 stagger-item" style="--delay: ${index * 100}ms;">
+              <div class="feature-icon ${product.iconGradient} mb-4 text-4xl flex items-center justify-center w-16 h-16 rounded-xl">
+                ${feature.icon}
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">${feature.title}</h3>
+              <p class="text-gray-600">${feature.description}</p>
+            </div>
+          `).join('');
+        }
+
+        // Render modules
+        const modulesContainer = document.getElementById('modules-grid');
+        if (modulesContainer && product.modules) {
+          modulesContainer.innerHTML = product.modules.map((module, index) => `
+            <div class="module-card stagger-item" style="--delay: ${index * 100}ms;">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">${module.name}</h3>
+              <ul class="space-y-2">
+                ${module.items.map(item => `
+                  <li class="text-sm text-gray-600 flex items-start">
+                    <svg class="w-4 h-4 mr-2 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    ${item}
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          `).join('');
+        }
+
+        // Render download section
+        const downloadContainer = document.getElementById('download-section');
+        if (downloadContainer && product.versions && product.versions.length > 0) {
+          const version = product.versions[0];
+          const downloads = version.downloads;
+
+          downloadContainer.innerHTML = `
+            <div class="card p-8 fade-in">
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <h3 class="text-2xl font-semibold text-gray-900 mb-2">最新版本 v${version.version}</h3>
+                  <p class="text-gray-600">发布日期：${version.releaseDate} | 文件大小：${version.fileSize}</p>
+                </div>
+                <span class="px-4 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium">稳定版</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                ${downloads.windows.installer ? `
+                  <a href="${downloads.windows.installer.url}" class="btn btn-primary flex items-center justify-center gap-2 py-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    <div class="text-left">
+                      <div class="font-semibold">Windows 安装包</div>
+                      <div class="text-sm opacity-90">推荐 · 自动安装</div>
+                    </div>
+                  </a>
+                ` : ''}
+
+                ${downloads.windows.portable ? `
+                  <a href="${downloads.windows.portable.url}" class="btn btn-outline flex items-center justify-center gap-2 py-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    <div class="text-left">
+                      <div class="font-semibold">Windows 便携版</div>
+                      <div class="text-sm opacity-90">无需安装 · 即开即用</div>
+                    </div>
+                  </a>
+                ` : ''}
+              </div>
+
+              <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                <p class="text-sm text-blue-800">
+                  <strong>系统要求：</strong>Windows 10 或更高版本，64位操作系统
+                </p>
+              </div>
+            </div>
+          `;
+        }
+
+        // Render version history
+        const timelineContainer = document.getElementById('version-timeline');
+        if (timelineContainer && product.versions) {
+          timelineContainer.innerHTML = product.versions.map((version, index) => `
+            <div class="timeline-item fade-in" style="--delay: ${index * 150}ms;">
+              <div class="flex items-baseline gap-4 mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">v${version.version}</h3>
+                <span class="text-sm text-gray-500">${version.releaseDate}</span>
+              </div>
+              <p class="text-gray-600">${version.changelog}</p>
+              <a href="./v${version.version}/download.html" class="text-blue-600 hover:text-blue-700 text-sm mt-2 inline-block">
+                查看该版本下载选项 &rarr;
+              </a>
+            </div>
+          `).join('');
+        }
+
+        // Re-initialize scroll observer
+        if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
+          scrollObserver.observeAll(document.querySelectorAll('.stagger-item, .fade-in'));
+        }
+      }
+    });
+  </script>
+</body>
+</html>

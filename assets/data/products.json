@@ -1,0 +1,296 @@
+{
+  "products": [
+    {
+      "id": "product-1",
+      "name": "JumpEngine 产品一",
+      "shortName": "产品一",
+      "version": "1.0.0",
+      "description": "这里是产品一的占位描述文案。后续将替换为实际的产品功能介绍，清晰传达产品的核心价值和使用场景。",
+      "keywords": ["关键词一", "关键词二", "关键词三"],
+      "categories": ["category-1"],
+      "featured": true,
+      "featuredDescription": "这是产品一的招牌产品展示文案。突出产品的核心优势和特色功能，吸引用户进一步了解。",
+      "techStack": ["技术栈一", "技术栈二", "MIT License"],
+      "iconGradient": "icon-gradient-1",
+      "repo": {
+        "github": "https://github.com/jumpengine-org/product-1",
+        "gitee": "https://gitee.com/jumpengine/product-1"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "releaseDate": "2026-05-28",
+          "fileSize": "45.2 MB",
+          "changelog": "初始版本发布，提供核心功能模块，后续将持续迭代更新",
+          "downloads": {
+            "windows": {
+              "installer": {
+                "url": "https://github.com/jumpengine-org/product-1/releases/download/v1.0.0/product-1-1.0.0-setup.exe",
+                "fileName": "product-1-1.0.0-setup.exe",
+                "sha256": "待更新"
+              },
+              "portable": {
+                "url": "https://github.com/jumpengine-org/product-1/releases/download/v1.0.0/product-1-1.0.0-portable.exe",
+                "fileName": "product-1-1.0.0-portable.exe",
+                "sha256": "待更新"
+              }
+            }
+          }
+        }
+      ],
+      "features": [
+        {
+          "title": "核心特性一",
+          "description": "这里是特性一的占位描述，说明该特性的功能和价值",
+          "icon": "⚙️"
+        },
+        {
+          "title": "核心特性二",
+          "description": "这里是特性二的占位描述，说明该特性的功能和价值",
+          "icon": "📊"
+        },
+        {
+          "title": "核心特性三",
+          "description": "这里是特性三的占位描述，说明该特性的功能和价值",
+          "icon": "📝"
+        },
+        {
+          "title": "核心特性四",
+          "description": "这里是特性四的占位描述，说明该特性的功能和价值",
+          "icon": "🧩"
+        },
+        {
+          "title": "核心特性五",
+          "description": "这里是特性五的占位描述，说明该特性的功能和价值",
+          "icon": "🔒"
+        },
+        {
+          "title": "核心特性六",
+          "description": "这里是特性六的占位描述，说明该特性的功能和价值",
+          "icon": "📋"
+        }
+      ],
+      "modules": [
+        {
+          "name": "功能模块一",
+          "items": ["子功能 A", "子功能 B", "子功能 C"]
+        },
+        {
+          "name": "功能模块二",
+          "items": ["子功能 D", "子功能 E"]
+        },
+        {
+          "name": "功能模块三",
+          "items": ["子功能 F", "子功能 G", "子功能 H"]
+        }
+      ]
+    },
+    {
+      "id": "product-2",
+      "name": "JumpEngine 产品二",
+      "shortName": "产品二",
+      "version": "1.0.0",
+      "description": "这里是产品二的占位描述文案。后续将替换为实际的产品功能介绍，清晰传达产品的核心价值和使用场景。",
+      "keywords": ["关键词四", "关键词五", "关键词六"],
+      "categories": ["category-2"],
+      "featured": true,
+      "featuredDescription": "这是产品二的招牌产品展示文案。突出产品的核心优势和特色功能，吸引用户进一步了解。",
+      "techStack": ["技术栈三", "技术栈四", "MIT License"],
+      "iconGradient": "icon-gradient-2",
+      "repo": {
+        "github": "https://github.com/jumpengine-org/product-2",
+        "gitee": "https://gitee.com/jumpengine/product-2"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "releaseDate": "2026-05-28",
+          "fileSize": "38.5 MB",
+          "changelog": "初始版本发布，提供核心功能模块，后续将持续迭代更新",
+          "downloads": {
+            "windows": {
+              "installer": {
+                "url": "https://github.com/jumpengine-org/product-2/releases/download/v1.0.0/product-2-1.0.0-setup.exe",
+                "fileName": "product-2-1.0.0-setup.exe",
+                "sha256": "待更新"
+              },
+              "portable": {
+                "url": "https://github.com/jumpengine-org/product-2/releases/download/v1.0.0/product-2-1.0.0-portable.exe",
+                "fileName": "product-2-1.0.0-portable.exe",
+                "sha256": "待更新"
+              }
+            }
+          }
+        }
+      ],
+      "features": [
+        {
+          "title": "核心特性一",
+          "description": "这里是特性一的占位描述，说明该特性的功能和价值",
+          "icon": "🎬"
+        },
+        {
+          "title": "核心特性二",
+          "description": "这里是特性二的占位描述，说明该特性的功能和价值",
+          "icon": "✨"
+        },
+        {
+          "title": "核心特性三",
+          "description": "这里是特性三的占位描述，说明该特性的功能和价值",
+          "icon": "📁"
+        },
+        {
+          "title": "核心特性四",
+          "description": "这里是特性四的占位描述，说明该特性的功能和价值",
+          "icon": "🖱️"
+        }
+      ],
+      "modules": [
+        {
+          "name": "功能模块一",
+          "items": ["子功能 A", "子功能 B", "子功能 C"]
+        },
+        {
+          "name": "功能模块二",
+          "items": ["子功能 D", "子功能 E"]
+        },
+        {
+          "name": "功能模块三",
+          "items": ["子功能 F", "子功能 G"]
+        }
+      ]
+    },
+    {
+      "id": "product-3",
+      "name": "JumpEngine 产品三",
+      "shortName": "产品三",
+      "version": "1.0.0",
+      "description": "这里是产品三的占位描述文案。后续将替换为实际的产品功能介绍，清晰传达产品的核心价值和使用场景。",
+      "keywords": ["关键词七", "关键词八", "关键词九"],
+      "categories": ["category-2"],
+      "featured": false,
+      "featuredDescription": "",
+      "techStack": ["技术栈五", "技术栈六", "MIT License"],
+      "iconGradient": "icon-gradient-3",
+      "repo": {
+        "github": "https://github.com/jumpengine-org/product-3",
+        "gitee": "https://gitee.com/jumpengine/product-3"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "releaseDate": "2026-05-28",
+          "fileSize": "12.8 MB",
+          "changelog": "初始版本发布，提供核心功能模块，后续将持续迭代更新",
+          "downloads": {
+            "windows": {
+              "portable": {
+                "url": "https://github.com/jumpengine-org/product-3/releases/download/v1.0.0/product-3-1.0.0-portable.exe",
+                "fileName": "product-3-1.0.0-portable.exe",
+                "sha256": "待更新"
+              }
+            }
+          }
+        }
+      ],
+      "features": [
+        {
+          "title": "核心特性一",
+          "description": "这里是特性一的占位描述，说明该特性的功能和价值",
+          "icon": "🖼️"
+        },
+        {
+          "title": "核心特性二",
+          "description": "这里是特性二的占位描述，说明该特性的功能和价值",
+          "icon": "📁"
+        },
+        {
+          "title": "核心特性三",
+          "description": "这里是特性三的占位描述，说明该特性的功能和价值",
+          "icon": "⚙️"
+        },
+        {
+          "title": "核心特性四",
+          "description": "这里是特性四的占位描述，说明该特性的功能和价值",
+          "icon": "💾"
+        }
+      ],
+      "modules": [
+        {
+          "name": "功能模块一",
+          "items": ["子功能 A", "子功能 B", "子功能 C"]
+        },
+        {
+          "name": "功能模块二",
+          "items": ["子功能 D", "子功能 E"]
+        }
+      ]
+    },
+    {
+      "id": "product-4",
+      "name": "JumpEngine 产品四",
+      "shortName": "产品四",
+      "version": "1.0.0",
+      "description": "这里是产品四的占位描述文案。后续将替换为实际的产品功能介绍，清晰传达产品的核心价值和使用场景。",
+      "keywords": ["关键词十", "关键词十一", "关键词十二"],
+      "categories": ["category-1"],
+      "featured": false,
+      "featuredDescription": "",
+      "techStack": ["技术栈七", "技术栈八", "MIT License"],
+      "iconGradient": "icon-gradient-4",
+      "repo": {
+        "github": "https://github.com/jumpengine-org/product-4",
+        "gitee": "https://gitee.com/jumpengine/product-4"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "releaseDate": "2026-05-28",
+          "fileSize": "15.3 MB",
+          "changelog": "初始版本发布，提供核心功能模块，后续将持续迭代更新",
+          "downloads": {
+            "windows": {
+              "portable": {
+                "url": "https://github.com/jumpengine-org/product-4/releases/download/v1.0.0/product-4-1.0.0-portable.exe",
+                "fileName": "product-4-1.0.0-portable.exe",
+                "sha256": "待更新"
+              }
+            }
+          }
+        }
+      ],
+      "features": [
+        {
+          "title": "核心特性一",
+          "description": "这里是特性一的占位描述，说明该特性的功能和价值",
+          "icon": "🔤"
+        },
+        {
+          "title": "核心特性二",
+          "description": "这里是特性二的占位描述，说明该特性的功能和价值",
+          "icon": "📝"
+        },
+        {
+          "title": "核心特性三",
+          "description": "这里是特性三的占位描述，说明该特性的功能和价值",
+          "icon": "👁️"
+        },
+        {
+          "title": "核心特性四",
+          "description": "这里是特性四的占位描述，说明该特性的功能和价值",
+          "icon": "📋"
+        }
+      ],
+      "modules": [
+        {
+          "name": "功能模块一",
+          "items": ["子功能 A", "子功能 B"]
+        },
+        {
+          "name": "功能模块二",
+          "items": ["子功能 C", "子功能 D"]
+        }
+      ]
+    }
+  ]
+}

@@ -20,6 +20,7 @@
   <script src="assets/js/ScrollObserver.js" defer></script>
   <script src="assets/js/Counter.js" defer></script>
   <script src="assets/js/NavController.js" defer></script>
+  <script src="assets/js/ProductManager.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -138,150 +139,31 @@
       </div>
     </section>
 
-    <!-- Product Matrix Section -->
+    <!-- Featured Products Section -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-16 fade-in">
-          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">产品矩阵</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">按场景分类的核心产品</h2>
+          <p class="text-sm uppercase tracking-widest text-blue-600 font-medium mb-4">招牌产品</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">精选核心产品</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            这里是产品矩阵简介的占位文案。后续将替换为实际的产品体系描述，说明各产品如何协同工作以满足不同用户需求。
+            为您精选 JumpEngine 核心产品，提供专业的工具解决方案
           </p>
         </div>
 
-        <!-- Group 1: Creation Flow -->
-        <div class="card p-8 mb-8 fade-in">
-          <div class="mb-6">
-            <h3 class="text-2xl font-semibold text-gray-900 mb-2">创作流</h3>
-            <p class="text-gray-600">录屏 → 剪辑 → 格式转换，一站式内容创作解决方案</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Product Item 1 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 100ms;">
-              <div class="icon-placeholder icon-gradient-1 mb-4">P1</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品1名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品1的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Product Item 2 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 200ms;">
-              <div class="icon-placeholder icon-gradient-2 mb-4">P2</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品2名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品2的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Product Item 3 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 300ms;">
-              <div class="icon-placeholder icon-gradient-3 mb-4">P3</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品3名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品3的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </div>
+        <!-- Featured Products Grid (2 columns) -->
+        <div id="featured-products" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Dynamically rendered by JavaScript -->
         </div>
 
-        <!-- Group 2: Efficiency Flow -->
-        <div class="card p-8 mb-8 fade-in">
-          <div class="mb-6">
-            <h3 class="text-2xl font-semibold text-gray-900 mb-2">效率流</h3>
-            <p class="text-gray-600">投屏 → 扩展屏 → 屏幕共享，提升工作效率的工具集</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Product Item 4 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 100ms;">
-              <div class="icon-placeholder icon-gradient-4 mb-4">P4</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品4名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品4的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Product Item 5 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 200ms;">
-              <div class="icon-placeholder icon-gradient-5 mb-4">P5</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品5名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品5的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Product Item 6 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 300ms;">
-              <div class="icon-placeholder icon-gradient-6 mb-4">P6</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品6名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品6的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Group 3: Security Flow -->
-        <div class="card p-8 fade-in">
-          <div class="mb-6">
-            <h3 class="text-2xl font-semibold text-gray-900 mb-2">安全流</h3>
-            <p class="text-gray-600">加密、加水印，保护您的数字资产安全</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Product Item 7 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 100ms;">
-              <div class="icon-placeholder icon-gradient-1 mb-4">P7</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品7名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品7的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Product Item 8 -->
-            <div class="stagger-item p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300" style="--delay: 200ms;">
-              <div class="icon-placeholder icon-gradient-2 mb-4">P8</div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">产品8名称</h4>
-              <p class="text-sm text-gray-600 mb-4">这里是产品8的功能简介占位文案。简要说明产品的核心功能和适用场景。</p>
-              <a href="products.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group">
-                了解详情
-                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </div>
+        <!-- View All Products Link -->
+        <div class="text-center fade-in">
+          <a href="products.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group">
+            查看全部产品
+            <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
         </div>
       </div>
     </section>

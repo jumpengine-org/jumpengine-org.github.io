@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下载 Mathbox v2.0.0</title>
+  <meta name="description" content="下载 Mathbox v2.0.0，支持 Windows 安装包和便携版">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../../index.html" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">JumpEngine</a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="../../index.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">主页<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../products/products.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">产品<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">源码<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">关于<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+          <a href="../../download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">下载<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span></a>
+        </nav>
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="打开菜单"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="../../index.html" class="block py-2 text-gray-600 hover:text-blue-600">主页</a>
+        <a href="../../products/products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
+        <a href="../../source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
+        <a href="../../about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
+        <a href="../../download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="h-16"></div>
+
+  <main>
+    <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12 fade-in">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">下载 Mathbox v2.0.0</h1>
+            <p class="text-gray-600">选择适合您的平台和版本</p>
+          </div>
+
+          <div class="flex justify-center gap-4 mb-12 fade-in">
+            <button class="platform-tab active px-6 py-3 bg-blue-600 text-white rounded-lg font-medium" data-platform="windows">Windows</button>
+            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200" data-platform="mac">macOS</button>
+            <button class="platform-tab px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200" data-platform="linux">Linux</button>
+          </div>
+
+          <div id="download-options" class="space-y-6">
+            <!-- Dynamically rendered -->
+          </div>
+
+          <div class="mt-12 card p-8 fade-in">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">安装说明</h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">1</div>
+                <div><h3 class="text-lg font-semibold text-gray-900 mb-2">下载安装包</h3><p class="text-gray-600">点击上方下载按钮，选择合适的版本进行下载</p></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">2</div>
+                <div><h3 class="text-lg font-semibold text-gray-900 mb-2">运行安装程序</h3><p class="text-gray-600">双击下载的安装包，按照提示完成安装</p></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">3</div>
+                <div><h3 class="text-lg font-semibold text-gray-900 mb-2">启动使用</h3><p class="text-gray-600">安装完成后，从开始菜单或桌面快捷方式启动应用</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 card p-8 fade-in">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">系统要求</h2>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Windows 10 或更高版本</li>
+              <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>64位操作系统</li>
+              <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>至少 2GB 可用磁盘空间</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-50 py-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div><h4 class="font-semibold text-gray-900 mb-4">产品</h4><ul class="space-y-2 text-sm"><li><a href="../../products/products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li><li><a href="../../download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li><li><a href="../../source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li></ul></div>
+        <div><h4 class="font-semibold text-gray-900 mb-4">支持</h4><ul class="space-y-2 text-sm"><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">使用文档</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">常见问题</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">更新日志</a></li></ul></div>
+        <div><h4 class="font-semibold text-gray-900 mb-4">关于</h4><ul class="space-y-2 text-sm"><li><a href="../../about.html" class="text-gray-600 hover:text-blue-600 transition-colors">品牌介绍</a></li><li><a href="../../about.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">联系方式</a></li><li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">加入我们</a></li></ul></div>
+      </div>
+      <div class="pt-8 border-t border-gray-200 text-center"><p class="text-sm text-gray-500">&copy; 2026 JumpEngine. 保留所有权利。</p><p class="text-xs text-gray-400 mt-2">MIT License · 开源免费</p></div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/NavController.js"></script>
+  <script src="../../assets/js/ScrollObserver.js"></script>
+  <script src="../../assets/js/ProductManager.js"></script>
+  <script src="../../assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (typeof initNavigation === 'function') initNavigation();
+      if (typeof initMobileMenu === 'function') initMobileMenu();
+
+      await productManager.loadProducts();
+      const product = productManager.getProductById('mathbox');
+      const version = product.versions.find(v => v.version === '2.0.0');
+
+      if (version) {
+        const downloads = version.downloads;
+        const container = document.getElementById('download-options');
+
+        container.innerHTML = `
+          <div class="card p-8 fade-in" data-platform="windows">
+            <h3 class="text-xl font-semibold text-gray-900 mb-6">Windows 版本</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${downloads.windows.installer ? `
+                <div class="border-2 border-blue-100 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"><svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
+                    <div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-1">安装包版本</h4><p class="text-sm text-gray-600 mb-2">推荐大多数用户使用</p><p class="text-xs text-gray-500">文件大小：${version.fileSize}</p></div>
+                  </div>
+                  <a href="${downloads.windows.installer.url}" class="btn btn-primary w-full py-3 flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>下载安装包</a>
+                  <div class="mt-4 text-xs text-gray-500"><p>SHA256: ${downloads.windows.installer.sha256.substring(0, 16)}...</p></div>
+                </div>
+              ` : ''}
+              ${downloads.windows.portable ? `
+                <div class="border-2 border-gray-100 rounded-xl p-6 hover:border-gray-300 transition-colors">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center"><svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
+                    <div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-1">便携版</h4><p class="text-sm text-gray-600 mb-2">无需安装，即开即用</p><p class="text-xs text-gray-500">文件大小：${version.fileSize}</p></div>
+                  </div>
+                  <a href="${downloads.windows.portable.url}" class="btn btn-outline w-full py-3 flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>下载便携版</a>
+                  <div class="mt-4 text-xs text-gray-500"><p>SHA256: ${downloads.windows.portable.sha256.substring(0, 16)}...</p></div>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
+
+        if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
+          scrollObserver.observeAll(container.querySelectorAll('.fade-in'));
+        }
+      }
+
+      // Platform tab switching
+      const tabs = document.querySelectorAll('.platform-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => { t.classList.remove('active', 'bg-blue-600', 'text-white'); t.classList.add('bg-gray-100', 'text-gray-700'); });
+          tab.classList.add('active', 'bg-blue-600', 'text-white');
+          tab.classList.remove('bg-gray-100', 'text-gray-700');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

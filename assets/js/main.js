@@ -6,7 +6,7 @@
 // ========================================
 // 页面加载完成后初始化
 // ========================================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   // 初始化导航栏控制器
   initNavController();
 
@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 初始化右侧快捷浮层（如果存在）
   initQuickActions();
+
+  // 初始化产品管理并渲染内容
+  await initProductManager();
 });
 
 // ========================================
@@ -236,8 +239,124 @@ function throttle(func, limit = 200) {
 }
 
 // ========================================
+// 产品管理初始化
+// ========================================
+async function initProductManager() {
+  // 检查 ProductManager 是否可用
+  if (typeof productManager === 'undefined') {
+    console.warn('ProductManager not available');
+    return;
+  }
+
+  // 加载产品数据
+  await productManager.loadProducts();
+
+  // 根据当前页面类型渲染相应内容
+  const path = window.location.pathname;
+
+  // 主页：渲染招牌产品
+  if (path.match(/index\.html$/) || path === '/' || path === '') {
+    renderFeaturedProductsOnHomepage();
+  }
+
+  // 产品列表页：渲染所有产品
+  if (path.match(/products\.html$/)) {
+    renderAllProductsOnListPage();
+  }
+}
+
+/**
+ * 在主页渲染招牌产品
+ */
+function renderFeaturedProductsOnHomepage() {
+  const container = document.getElementById('featured-products');
+  if (!container) return;
+
+  const featuredProducts = productManager.getFeaturedProducts(2);
+
+  if (featuredProducts.length === 0) {
+    container.innerHTML = '<p class="text-gray-600 text-center">暂无产品展示</p>';
+    return;
+  }
+
+  container.innerHTML = featuredProducts.map((product, index) =>
+    productManager.renderFeaturedCard(product, index)
+  ).join('');
+
+  // 重新初始化滚动观察器
+  if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
+    scrollObserver.observeAll(container.querySelectorAll('.stagger-item'));
+  }
+}
+
+/**
+ * 在产品列表页渲染所有产品
+ */
+function renderAllProductsOnListPage() {
+  const container = document.getElementById('products-container');
+  if (!container) return;
+
+  const allProducts = productManager.getAllProducts();
+
+  if (allProducts.length === 0) {
+    container.innerHTML = '<p class="text-gray-600 text-center">暂无产品</p>';
+    return;
+  }
+
+  // 按分类组织产品
+  const categories = {
+    'category-1': { title: '第一类', description: '这里是第一类产品的占位描述文案', products: [] },
+    'category-2': { title: '第二类', description: '这里是第二类产品的占位描述文案', products: [] },
+    'category-3': { title: '第三类', description: '这里是第三类产品的占位描述文案', products: [] }
+  };
+
+  // 将产品分配到对应分类
+  allProducts.forEach(product => {
+    product.categories.forEach(cat => {
+      if (categories[cat]) {
+        categories[cat].products.push(product);
+      }
+    });
+  });
+
+  // 渲染每个分类
+  let html = '';
+  let categoryIndex = 0;
+
+  Object.entries(categories).forEach(([key, category]) => {
+    if (category.products.length === 0) return;
+
+    html += `
+      <div class="fade-in" style="--delay: ${categoryIndex * 150}ms;">
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">${category.title}</h2>
+          <p class="text-gray-600">${category.description}</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          ${category.products.map((product, index) =>
+            productManager.renderProductCard(product, (index + 1) * 100)
+          ).join('')}
+        </div>
+      </div>
+    `;
+
+    categoryIndex++;
+  });
+
+  container.innerHTML = html;
+
+  // 重新初始化滚动观察器
+  if (typeof scrollObserver !== 'undefined' && scrollObserver.observeAll) {
+    scrollObserver.observeAll(container.querySelectorAll('.stagger-item, .fade-in'));
+  }
+}
+
+// ========================================
 // 导出全局可用的函数
 // ========================================
 window.smoothScrollTo = smoothScrollTo;
 window.debounce = debounce;
 window.throttle = throttle;
+window.renderFeaturedProductsOnHomepage = renderFeaturedProductsOnHomepage;
+window.renderAllProductsOnListPage = renderAllProductsOnListPage;
