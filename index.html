@@ -19,6 +19,7 @@
   <!-- JavaScript Modules -->
   <script src="assets/js/ScrollObserver.js" defer></script>
   <script src="assets/js/Counter.js" defer></script>
+  <script src="assets/js/VisitorCounter.js" defer></script>
   <script src="assets/js/NavController.js" defer></script>
   <script src="assets/js/ProductManager.js" defer></script>
   <script src="assets/js/main.js" defer></script>
@@ -44,16 +45,8 @@
             产品
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="source.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
-            源码
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
           <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
             关于
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="download.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors relative group">
-            下载
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
@@ -72,9 +65,7 @@
       <div class="px-4 py-3 space-y-2">
         <a href="index.html" class="block py-2 text-blue-600 font-semibold">主页</a>
         <a href="products.html" class="block py-2 text-gray-600 hover:text-blue-600">产品</a>
-        <a href="source.html" class="block py-2 text-gray-600 hover:text-blue-600">源码</a>
         <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600">关于</a>
-        <a href="download.html" class="block py-2 text-gray-600 hover:text-blue-600">下载</a>
       </div>
     </div>
   </header>
@@ -95,19 +86,22 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left: Text Content -->
           <div class="text-left text-white">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in leading-tight">
+            <h1 class="text-4xl md:text-6xl font-bold mb-2 fade-in leading-tight">
               Jumpengine<br>未来科技感
             </h1>
+            <p id="visitor-counter" class="text-sm text-blue-200/80 mb-6 fade-in" style="transition-delay: 80ms;">
+              您是第 <span id="visitor-count">0</span> 位访客
+            </p>
             <p class="text-lg md:text-xl text-blue-100/90 mb-8 fade-in" style="transition-delay: 150ms;">
               这里是品牌核心价值主张的占位文案。后续将替换为实际的产品定位描述，清晰传达产品的独特优势和使用场景。
             </p>
 
             <div class="flex flex-col sm:flex-row sm:items-center gap-4 fade-in" style="transition-delay: 300ms;">
-              <a href="download.html" class="btn btn-primary bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl">
-                下载主要产品
+              <a href="products.html" class="btn btn-primary bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl">
+                浏览产品
               </a>
-              <a href="products.html" class="btn btn-secondary border-white text-white hover:bg-white/10">
-                了解产品矩阵
+              <a href="about.html" class="btn btn-secondary border-white text-white hover:bg-white/10">
+                了解更多
               </a>
             </div>
           </div>
@@ -233,8 +227,8 @@
           这里是行动号召的占位文案。引导用户进行下一步操作，如下载产品、查看文档或联系团队。
         </p>
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4">
-          <a href="download.html" class="btn btn-primary">
-            立即下载
+          <a href="products.html" class="btn btn-primary">
+            浏览产品
           </a>
           <a href="about.html" class="btn btn-outline">
             联系我们
@@ -253,8 +247,6 @@
           <h4 class="font-semibold text-gray-900 mb-4">产品</h4>
           <ul class="space-y-2 text-sm">
             <li><a href="products.html" class="text-gray-600 hover:text-blue-600 transition-colors">产品矩阵</a></li>
-            <li><a href="download.html" class="text-gray-600 hover:text-blue-600 transition-colors">下载中心</a></li>
-            <li><a href="source.html" class="text-gray-600 hover:text-blue-600 transition-colors">开源项目</a></li>
           </ul>
         </div>
 

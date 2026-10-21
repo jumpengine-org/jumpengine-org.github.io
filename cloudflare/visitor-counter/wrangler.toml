@@ -1,0 +1,10 @@
+name = "jumpengine-visitor-counter"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "VISITOR_COUNT"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# 部署后在 Dashboard 添加路由，或取消注释并填入 zone：
+# routes = [{ pattern = "jumpengine.org/api/visit", zone_name = "jumpengine.org" }]
