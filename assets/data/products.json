@@ -1,4 +1,4 @@
-{
+﻿{
   "products": [
     {
       "id": "product-1",
@@ -10,7 +10,7 @@
       "categories": ["category-1"],
       "featured": true,
       "featuredDescription": "这是产品一的招牌产品展示文案。突出产品的核心优势和特色功能，吸引用户进一步了解。",
-      "techStack": ["技术栈一", "技术栈二", "MIT License"],
+      "techStack": ["技术栈一", "技术栈二", "GPL-3.0 License"],
       "iconGradient": "icon-gradient-1",
       "repo": {
         "github": "https://github.com/jumpengine-org/product-1",
@@ -95,7 +95,7 @@
       "categories": ["category-2"],
       "featured": true,
       "featuredDescription": "这是产品二的招牌产品展示文案。突出产品的核心优势和特色功能，吸引用户进一步了解。",
-      "techStack": ["技术栈三", "技术栈四", "MIT License"],
+      "techStack": ["技术栈三", "技术栈四", "GPL-3.0 License"],
       "iconGradient": "icon-gradient-2",
       "repo": {
         "github": "https://github.com/jumpengine-org/product-2",
@@ -170,7 +170,7 @@
       "categories": ["category-2"],
       "featured": false,
       "featuredDescription": "",
-      "techStack": ["技术栈五", "技术栈六", "MIT License"],
+      "techStack": ["技术栈五", "技术栈六", "GPL-3.0 License"],
       "iconGradient": "icon-gradient-3",
       "repo": {
         "github": "https://github.com/jumpengine-org/product-3",
@@ -236,7 +236,7 @@
       "categories": ["category-1"],
       "featured": false,
       "featuredDescription": "",
-      "techStack": ["技术栈七", "技术栈八", "MIT License"],
+      "techStack": ["技术栈七", "技术栈八", "GPL-3.0 License"],
       "iconGradient": "icon-gradient-4",
       "repo": {
         "github": "https://github.com/jumpengine-org/product-4",
